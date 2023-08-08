@@ -15,7 +15,10 @@ class TOONTANKS_API ATank : public ABasePawn
 	GENERATED_BODY()
 
 public : 
+// Sets default values for this pawn's properties
 ATank();
+
+// Called to bind functionality to input
 virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
 protected :

@@ -18,18 +18,34 @@ ATank::ATank()
 
 
 }
-
+// Called to bind functionality to input
 void ATank::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 {
+  // Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
-  //  
+  // Bind Axis
     PlayerInputComponent->BindAxis("MoveForward",this,&ATank::Move);
 }
 
-   void ATank::Move(float Value)
-{
 
+// Called every frame
+   void ATank::Move(float Value)
+
+{
+//   UE_LOG(LogTemp,Warning,TEXT("Move Forward : %f"),Value);
+  FVector DeltaLocation = FVector::ZeroVector;
+
+
+// Determine direction based on input
+  DeltaLocation.X = Value * MoveSpeed * GetWorld()->DeltaTimeSeconds;
+
+
+// Move based on direction
+  AddActorLocalOffset(DeltaLocation);
+
+  
+// Call parent implementation
     UE_LOG(LogTemp,Warning,TEXT("Value : %f"),Value);
 
 }
