@@ -4,6 +4,7 @@
 #include "Tank.h"
 #include "Camera/CameraComponent.h"
 #include "GameFramework/SpringArmComponent.h"
+#include "Kismet/GameplayStatics.h"
 
 // Sets default values
 ATank::ATank()
@@ -34,11 +35,13 @@ void ATank::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
 {
 //   UE_LOG(LogTemp,Warning,TEXT("Move Forward : %f"),Value);
+
+
   FVector DeltaLocation = FVector::ZeroVector;
 
 
 // Determine direction based on input
-  DeltaLocation.X = Value * MoveSpeed * GetWorld()->DeltaTimeSeconds;
+  DeltaLocation.X = Value * MoveSpeed * GameplayStatics::GetWorldDeltaSeconds(this);
 
 
 // Move based on direction

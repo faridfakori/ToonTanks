@@ -35,7 +35,7 @@ protected :
 		class USpringArmComponent* SpringArm;
 
 		void Move(float Value);
-
+ 
 };
 
 
