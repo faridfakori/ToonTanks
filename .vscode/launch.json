@@ -1,152 +1,166 @@
 {
-	"version": "0.2.0",
-	"configurations": [
-		{
-			"name": "Launch ToonTanks (Debug)",
-			"request": "launch",
-			"program": "F:\\UnrealProject\\ToonTanks\\ToonTanksProjectSetup_4.25\\ToonTanks\\Binaries\\Win64\\UnrealGame-Win64-Debug.exe",
-			"preLaunchTask": "ToonTanks Win64 Debug Build",
-			"args": [
-			],
-			"cwd": "F:\\UE_5.2",
-			"stopAtEntry": false,
-			"console": "externalTerminal",
-			"type": "cppvsdbg",
-			"visualizerFile": "F:\\UE_5.2\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
-			"sourceFileMap": {
-				"D:\\build\\++UE5\\Sync": "F:\\UE_5.2"
-			}
-		},
-		{
-			"name": "Launch ToonTanks (DebugGame)",
-			"request": "launch",
-			"program": "F:\\UnrealProject\\ToonTanks\\ToonTanksProjectSetup_4.25\\ToonTanks\\Binaries\\Win64\\UnrealGame-Win64-DebugGame.exe",
-			"preLaunchTask": "ToonTanks Win64 DebugGame Build",
-			"args": [
-			],
-			"cwd": "F:\\UE_5.2",
-			"stopAtEntry": false,
-			"console": "externalTerminal",
-			"type": "cppvsdbg",
-			"visualizerFile": "F:\\UE_5.2\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
-			"sourceFileMap": {
-				"D:\\build\\++UE5\\Sync": "F:\\UE_5.2"
-			}
-		},
-		{
-			"name": "Launch ToonTanks (Development)",
-			"request": "launch",
-			"program": "F:\\UnrealProject\\ToonTanks\\ToonTanksProjectSetup_4.25\\ToonTanks\\Binaries\\Win64\\UnrealGame.exe",
-			"preLaunchTask": "ToonTanks Win64 Development Build",
-			"args": [
-			],
-			"cwd": "F:\\UE_5.2",
-			"stopAtEntry": false,
-			"console": "externalTerminal",
-			"type": "cppvsdbg",
-			"visualizerFile": "F:\\UE_5.2\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
-			"sourceFileMap": {
-				"D:\\build\\++UE5\\Sync": "F:\\UE_5.2"
-			}
-		},
-		{
-			"name": "Launch ToonTanks (Test)",
-			"request": "launch",
-			"program": "F:\\UnrealProject\\ToonTanks\\ToonTanksProjectSetup_4.25\\ToonTanks\\Binaries\\Win64\\UnrealGame-Win64-Test.exe",
-			"preLaunchTask": "ToonTanks Win64 Test Build",
-			"args": [
-			],
-			"cwd": "F:\\UE_5.2",
-			"stopAtEntry": false,
-			"console": "externalTerminal",
-			"type": "cppvsdbg",
-			"visualizerFile": "F:\\UE_5.2\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
-			"sourceFileMap": {
-				"D:\\build\\++UE5\\Sync": "F:\\UE_5.2"
-			}
-		},
-		{
-			"name": "Launch ToonTanks (Shipping)",
-			"request": "launch",
-			"program": "F:\\UnrealProject\\ToonTanks\\ToonTanksProjectSetup_4.25\\ToonTanks\\Binaries\\Win64\\UnrealGame-Win64-Shipping.exe",
-			"preLaunchTask": "ToonTanks Win64 Shipping Build",
-			"args": [
-			],
-			"cwd": "F:\\UE_5.2",
-			"stopAtEntry": false,
-			"console": "externalTerminal",
-			"type": "cppvsdbg",
-			"visualizerFile": "F:\\UE_5.2\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
-			"sourceFileMap": {
-				"D:\\build\\++UE5\\Sync": "F:\\UE_5.2"
-			}
-		},
-		{
-			"name": "Launch ToonTanksEditor (Debug)",
-			"request": "launch",
-			"program": "F:\\UE_5.2\\Engine\\Binaries\\Win64\\UnrealEditor-Win64-Debug.exe",
-			"preLaunchTask": "ToonTanksEditor Win64 Debug Build",
-			"args": [
-				"F:\\UnrealProject\\ToonTanks\\ToonTanksProjectSetup_4.25\\ToonTanks\\ToonTanks.uproject"
-			],
-			"cwd": "F:\\UE_5.2",
-			"stopAtEntry": false,
-			"console": "externalTerminal",
-			"type": "cppvsdbg",
-			"visualizerFile": "F:\\UE_5.2\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
-			"sourceFileMap": {
-				"D:\\build\\++UE5\\Sync": "F:\\UE_5.2"
-			}
-		},
-		{
-			"name": "Launch ToonTanksEditor (DebugGame)",
-			"request": "launch",
-			"program": "F:\\UE_5.2\\Engine\\Binaries\\Win64\\UnrealEditor-Win64-DebugGame.exe",
-			"preLaunchTask": "ToonTanksEditor Win64 DebugGame Build",
-			"args": [
-				"F:\\UnrealProject\\ToonTanks\\ToonTanksProjectSetup_4.25\\ToonTanks\\ToonTanks.uproject"
-			],
-			"cwd": "F:\\UE_5.2",
-			"stopAtEntry": false,
-			"console": "externalTerminal",
-			"type": "cppvsdbg",
-			"visualizerFile": "F:\\UE_5.2\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
-			"sourceFileMap": {
-				"D:\\build\\++UE5\\Sync": "F:\\UE_5.2"
-			}
-		},
-		{
-			"name": "Launch ToonTanksEditor (Development)",
-			"request": "launch",
-			"program": "F:\\UE_5.2\\Engine\\Binaries\\Win64\\UnrealEditor.exe",
-			"preLaunchTask": "ToonTanksEditor Win64 Development Build",
-			"args": [
-				"F:\\UnrealProject\\ToonTanks\\ToonTanksProjectSetup_4.25\\ToonTanks\\ToonTanks.uproject"
-			],
-			"cwd": "F:\\UE_5.2",
-			"stopAtEntry": false,
-			"console": "externalTerminal",
-			"type": "cppvsdbg",
-			"visualizerFile": "F:\\UE_5.2\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
-			"sourceFileMap": {
-				"D:\\build\\++UE5\\Sync": "F:\\UE_5.2"
-			}
-		},
-		{
-			"name": "Generate Project Files",
-			"type": "coreclr",
-			"request": "launch",
-			"program": "F:\\UE_5.2\\Engine\\Build\\BatchFiles\\RunUBT.bat",
-			"args": [
-				"-projectfiles",
-				"-vscode",
-				"-project=F:\\UnrealProject\\ToonTanks\\ToonTanksProjectSetup_4.25\\ToonTanks\\ToonTanks.uproject",
-				"-game",
-				"-engine"
-			],
-			"console": "externalTerminal",
-			"stopAtEntry": false,
-			"cwd": "F:\\UE_5.2"
-		}
-	]
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch ToonTanks (Debug)",
+      "request": "launch",
+      "program": "F:\\UnrealProject\\ToonTanks\\ToonTanksProjectSetup_4.25\\ToonTanks\\Binaries\\Win64\\UnrealGame-Win64-Debug.exe",
+      "preLaunchTask": "ToonTanks Win64 Debug Build",
+      "args": [],
+      "cwd": "F:\\UE_5.2",
+      "stopAtEntry": false,
+      "console": "externalTerminal",
+      "type": "cppvsdbg",
+      "visualizerFile": "F:\\UE_5.2\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+      "sourceFileMap": {
+        "D:\\build\\++UE5\\Sync": "F:\\UE_5.2"
+      }
+    },
+    {
+      "name": "Launch ToonTanks (DebugGame)",
+      "request": "launch",
+      "program": "F:\\UnrealProject\\ToonTanks\\ToonTanksProjectSetup_4.25\\ToonTanks\\Binaries\\Win64\\UnrealGame-Win64-DebugGame.exe",
+      "preLaunchTask": "ToonTanks Win64 DebugGame Build",
+      "args": [],
+      "cwd": "F:\\UE_5.2",
+      "stopAtEntry": false,
+      "console": "externalTerminal",
+      "type": "cppvsdbg",
+      "visualizerFile": "F:\\UE_5.2\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+      "sourceFileMap": {
+        "D:\\build\\++UE5\\Sync": "F:\\UE_5.2"
+      }
+    },
+    {
+      "name": "Launch ToonTanks (Development)",
+      "request": "launch",
+      "program": "F:\\UnrealProject\\ToonTanks\\ToonTanksProjectSetup_4.25\\ToonTanks\\Binaries\\Win64\\UnrealGame.exe",
+      "preLaunchTask": "ToonTanks Win64 Development Build",
+      "args": [],
+      "cwd": "F:\\UE_5.2",
+      "stopAtEntry": false,
+      "console": "externalTerminal",
+      "type": "cppvsdbg",
+      "visualizerFile": "F:\\UE_5.2\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+      "sourceFileMap": {
+        "D:\\build\\++UE5\\Sync": "F:\\UE_5.2"
+      }
+    },
+    {
+      "name": "Launch ToonTanks (Test)",
+      "request": "launch",
+      "program": "F:\\UnrealProject\\ToonTanks\\ToonTanksProjectSetup_4.25\\ToonTanks\\Binaries\\Win64\\UnrealGame-Win64-Test.exe",
+      "preLaunchTask": "ToonTanks Win64 Test Build",
+      "args": [],
+      "cwd": "F:\\UE_5.2",
+      "stopAtEntry": false,
+      "console": "externalTerminal",
+      "type": "cppvsdbg",
+      "visualizerFile": "F:\\UE_5.2\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+      "sourceFileMap": {
+        "D:\\build\\++UE5\\Sync": "F:\\UE_5.2"
+      }
+    },
+    {
+      "name": "Launch ToonTanks (Shipping)",
+      "request": "launch",
+      "program": "F:\\UnrealProject\\ToonTanks\\ToonTanksProjectSetup_4.25\\ToonTanks\\Binaries\\Win64\\UnrealGame-Win64-Shipping.exe",
+      "preLaunchTask": "ToonTanks Win64 Shipping Build",
+      "args": [],
+      "cwd": "F:\\UE_5.2",
+      "stopAtEntry": false,
+      "console": "externalTerminal",
+      "type": "cppvsdbg",
+      "visualizerFile": "F:\\UE_5.2\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+      "sourceFileMap": {
+        "D:\\build\\++UE5\\Sync": "F:\\UE_5.2"
+      }
+    },
+    {
+      "name": "Launch ToonTanksEditor (Debug)",
+      "request": "launch",
+      "program": "F:\\UE_5.2\\Engine\\Binaries\\Win64\\UnrealEditor-Win64-Debug.exe",
+      "preLaunchTask": "ToonTanksEditor Win64 Debug Build",
+      "args": [
+        "F:\\UnrealProject\\ToonTanks\\ToonTanksProjectSetup_4.25\\ToonTanks\\ToonTanks.uproject"
+      ],
+      "cwd": "F:\\UE_5.2",
+      "stopAtEntry": false,
+      "console": "externalTerminal",
+      "type": "cppvsdbg",
+      "visualizerFile": "F:\\UE_5.2\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+      "sourceFileMap": {
+        "D:\\build\\++UE5\\Sync": "F:\\UE_5.2"
+      }
+    },
+    {
+      "name": "Launch ToonTanksEditor (DebugGame)",
+      "request": "launch",
+      "program": "F:\\UE_5.2\\Engine\\Binaries\\Win64\\UnrealEditor-Win64-DebugGame.exe",
+      "preLaunchTask": "ToonTanksEditor Win64 DebugGame Build",
+      "args": [
+        "F:\\UnrealProject\\ToonTanks\\ToonTanksProjectSetup_4.25\\ToonTanks\\ToonTanks.uproject"
+      ],
+      "cwd": "F:\\UE_5.2",
+      "stopAtEntry": false,
+      "console": "externalTerminal",
+      "type": "cppvsdbg",
+      "visualizerFile": "F:\\UE_5.2\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+      "sourceFileMap": {
+        "D:\\build\\++UE5\\Sync": "F:\\UE_5.2"
+      }
+    },
+    {
+      "name": "Launch ToonTanksEditor (Development)",
+      "request": "launch",
+      "program": "F:\\UE_5.2\\Engine\\Binaries\\Win64\\UnrealEditor.exe",
+      "preLaunchTask": "ToonTanksEditor Win64 Development Build",
+      "args": [
+        "F:\\UnrealProject\\ToonTanks\\ToonTanksProjectSetup_4.25\\ToonTanks\\ToonTanks.uproject"
+      ],
+      "cwd": "F:\\UE_5.2",
+      "stopAtEntry": false,
+      "console": "externalTerminal",
+      "type": "cppvsdbg",
+      "visualizerFile": "F:\\UE_5.2\\Engine\\Extras\\VisualStudioDebugging\\Unreal.natvis",
+      "sourceFileMap": {
+        "D:\\build\\++UE5\\Sync": "F:\\UE_5.2"
+      }
+    },
+    {
+      "name": "Generate Project Files",
+      "type": "coreclr",
+      "request": "launch",
+      "program": "F:\\UE_5.2\\Engine\\Build\\BatchFiles\\RunUBT.bat",
+      "args": [
+        "-projectfiles",
+        "-vscode",
+        "-project=F:\\UnrealProject\\ToonTanks\\ToonTanksProjectSetup_4.25\\ToonTanks\\ToonTanks.uproject",
+        "-game",
+        "-engine"
+      ],
+      "console": "externalTerminal",
+      "stopAtEntry": false,
+      "cwd": "F:\\UE_5.2"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": false,
+      "externalConsole": true,
+      "cwd": "f:/UnrealProject/ToonTanks/ToonTanksProjectSetup_4.25/ToonTanks",
+      "program": "f:/UnrealProject/ToonTanks/ToonTanksProjectSetup_4.25/ToonTanks/build/Debug/outDebug",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing for gdb",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ]
+    }
+  ]
 }

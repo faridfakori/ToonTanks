@@ -21,7 +21,10 @@ ATank();
 // Called to bind functionality to input
 virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-protected :
+protected:
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
+
 
  private : 
 
@@ -34,8 +37,18 @@ protected :
 		UPROPERTY(VisibleAnywhere  , Category = "Component" , meta = (AllowPrivateAccess = "true")) 
 		class USpringArmComponent* SpringArm;
 
+		
+
+		UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Variable",meta= (AllowPrivateAccess = "true"))
+		float TurnRate = 100.f;
+
+
+
 		void Move(float Value);
- 
+		void Turn(float Value);
+
+
+		APlayerController* PlayerControllerRef;
 };
 
 

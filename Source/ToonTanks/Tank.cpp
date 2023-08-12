@@ -27,6 +27,17 @@ void ATank::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
 
   // Bind Axis
     PlayerInputComponent->BindAxis("MoveForward",this,&ATank::Move);
+    PlayerInputComponent->BindAxis("Turn",this,&ATank::Turn);
+}
+
+void ATank::BeginPlay()
+{
+	Super::BeginPlay();
+
+  PlayerControllerRef = Cast<APlayerController>(GetController());
+
+
+	
 }
 
 
@@ -34,21 +45,23 @@ void ATank::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
    void ATank::Move(float Value)
 
 {
-//   UE_LOG(LogTemp,Warning,TEXT("Move Forward : %f"),Value);
 
+ FVector DeltaLocation = FVector::ZeroVector;
 
-  FVector DeltaLocation = FVector::ZeroVector;
+ DeltaLocation.X = Value * MoveSpeed * UGameplayStatics::GetWorldDeltaSeconds(this);
 
+ AddActorLocalOffset(DeltaLocation,true);
 
-// Determine direction based on input
-  DeltaLocation.X = Value * MoveSpeed * GameplayStatics::GetWorldDeltaSeconds(this);
+}
 
+void ATank::Turn(float Value)
 
-// Move based on direction
-  AddActorLocalOffset(DeltaLocation);
+{
 
-  
-// Call parent implementation
-    UE_LOG(LogTemp,Warning,TEXT("Value : %f"),Value);
+ FRotator DeltaRotation = FRotator::ZeroRotator;
+
+ DeltaRotation.Yaw = Value * TurnRate * UGameplayStatics::GetWorldDeltaSeconds(this);
+
+ AddActorLocalRotation(DeltaRotation,true);
 
 }
