@@ -19,7 +19,9 @@ public :
 ATank();
 
 // Called to bind functionality to input
-virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
+
+	virtual void Tick(float DeltaTime) override;
 
 protected:
 	// Called when the game starts or when spawned
@@ -29,7 +31,7 @@ protected:
  private : 
 
 		UPROPERTY(EditAnywhere , BlueprintReadOnly, Category = "Variables", meta = (AllowPrivateAccess = "true"))
-		float MoveSpeed = 100.f;
+		float MoveSpeed = 1000.f;
 
 		UPROPERTY(VisibleAnywhere  , Category = "Component" , meta = (AllowPrivateAccess = "true"))
 		class UCameraComponent* Camera;

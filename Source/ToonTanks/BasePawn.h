@@ -16,11 +16,9 @@ public:
 	ABasePawn();
 
 
-public:	
-	// Called every frame
-	virtual void Tick(float DeltaTime) override;
+protected : 
 
-	// Called to bind functionality to input
+	void RotateTurret(FVector LookAtTarget);
 	
 
 	private:

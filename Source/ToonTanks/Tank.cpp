@@ -37,7 +37,8 @@ void ATank::BeginPlay()
   PlayerControllerRef = Cast<APlayerController>(GetController());
 
 
-	
+
+
 }
 
 
@@ -63,5 +64,30 @@ void ATank::Turn(float Value)
  DeltaRotation.Yaw = Value * TurnRate * UGameplayStatics::GetWorldDeltaSeconds(this);
 
  AddActorLocalRotation(DeltaRotation,true);
+
+}
+
+
+void ATank::Tick(float DeltaTime)
+{
+	Super::Tick(DeltaTime);
+
+  FHitResult HitResult;
+
+
+  if(PlayerControllerRef)
+  
+  {
+
+    PlayerControllerRef->GetHitResultUnderCursor(ECC_Visibility,false,HitResult);
+    
+
+     RotateTurret(HitResult.ImpactPoint);
+     
+     DrawDebugSphere(GetWorld(),HitResult.ImpactPoint,20.f,12,FColor::Red,false,-1.f);
+
+  }
+
+  
 
 }
