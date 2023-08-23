@@ -19,31 +19,34 @@ ATank::ATank()
 
 
 }
-// Called to bind functionality to input
-void ATank::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
-{
-  // Set this pawn to call Tick() every frame.  You can turn this off to improve performance if you don't need it.
-	Super::SetupPlayerInputComponent(PlayerInputComponent);
-
-  // Bind Axis
-    PlayerInputComponent->BindAxis("MoveForward",this,&ATank::Move);
-    PlayerInputComponent->BindAxis("Turn",this,&ATank::Turn);
-}
 
 void ATank::BeginPlay()
 {
-	Super::BeginPlay();
 
-  PlayerControllerRef = Cast<APlayerController>(GetController());
-
+	 Super::BeginPlay();
 
 
+   PlayerControllerRef = Cast<APlayerController>(GetController());
 
 }
 
 
-// Called every frame
-   void ATank::Move(float Value)
+
+void ATank::SetupPlayerInputComponent(UInputComponent* PlayerInputComponent)
+{
+
+	  Super::SetupPlayerInputComponent(PlayerInputComponent);
+
+    PlayerInputComponent->BindAxis("MoveForward",this,&ATank::Move);
+
+    PlayerInputComponent->BindAxis("Turn",this,&ATank::Turn);
+
+    PlayerInputComponent->BindAction("Fire",IE_Pressed,this,&ATank::Fire);
+
+}
+
+
+void ATank::Move(float Value)
 
 {
 
@@ -68,15 +71,15 @@ void ATank::Turn(float Value)
 }
 
 
+
 void ATank::Tick(float DeltaTime)
 {
+
 	Super::Tick(DeltaTime);
 
   FHitResult HitResult;
 
-
-  if(PlayerControllerRef)
-  
+  if(PlayerControllerRef)  
   {
 
     PlayerControllerRef->GetHitResultUnderCursor(ECC_Visibility,false,HitResult);
@@ -87,7 +90,5 @@ void ATank::Tick(float DeltaTime)
      DrawDebugSphere(GetWorld(),HitResult.ImpactPoint,20.f,12,FColor::Red,false,-1.f);
 
   }
-
-  
 
 }
