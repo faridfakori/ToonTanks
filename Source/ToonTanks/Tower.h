@@ -6,6 +6,7 @@
 #include "BasePawn.h"
 #include "Tower.generated.h"
 
+
 /**
  * 
  */
@@ -28,9 +29,18 @@ virtual void BeginPlay() override;
 UPROPERTY(EditAnywhere,BlueprintReadWrite,Category="Variable",meta= (AllowPrivateAccess = "true"))
 float FireRange = 500.f;
 
+
+
 private :
 
 class ATank* PlayerTank;
 
+FTimerHandle FireRateTimerHandle;
+
+float FireRate = 2.f;
+
+void CheckFireCondition();
+
+bool InFireRange();
 
 };
