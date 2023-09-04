@@ -20,6 +20,8 @@ public :
 
 ATower();
 
+void HandleDestruction();
+
 virtual void Tick(float DeltaTime) override;
 
 protected :

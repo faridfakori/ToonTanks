@@ -26,7 +26,21 @@ void ATank::BeginPlay()
 	 Super::BeginPlay();
 
 
-   PlayerControllerRef = Cast<APlayerController>(GetController());
+   TankPlayerController = Cast<APlayerController>(GetController());
+
+}
+
+void ATank::HandleDestruction()
+{
+
+  Super::HandleDestuction();
+
+   
+  // Hide all components
+  SetActorHiddenInGame(true);
+  // -- Or just call base pawn hide function
+  // Delete self
+  SetActorTickEnabled(false);
 
 }
 
@@ -79,10 +93,10 @@ void ATank::Tick(float DeltaTime)
 
   FHitResult HitResult;
 
-  if(PlayerControllerRef)  
+  if(TankPlayerController)  
   {
 
-     PlayerControllerRef->GetHitResultUnderCursor(ECC_Visibility,false,HitResult);
+     TankPlayerController->GetHitResultUnderCursor(ECC_Visibility,false,HitResult);
     
      RotateTurret(HitResult.ImpactPoint);
      

@@ -25,10 +25,18 @@ ABasePawn::ABasePawn()
 
 	ProjectileSpawnPoint = CreateDefaultSubobject<USceneComponent>("Projectile Spawn Point");
 	ProjectileSpawnPoint->SetupAttachment(TurretMesh);
-	
 
+}
 
+void ABasePawn::HandleDestuction()
+{
+	// --- Universal functionality ---
+	// Play death effects particle, sound and camera shake.
 
+	// --- Then do child overrides ---
+	// -- PawnTurret - Inform GameMode Turret died -> Then Destroy() self.
+
+	// -- PawnTank - Inform GameMode Player died -> Then Hide() all components && stop movement input.
 }
 
 void ABasePawn::RotateTurret(FVector LookAtTarget)
@@ -50,7 +58,7 @@ void ABasePawn::Fire()
 	FVector ProjectileSpawnPointLocation = ProjectileSpawnPoint->GetComponentLocation();
 	FRotator ProjectileSpawnPointRotation = ProjectileSpawnPoint->GetComponentRotation();
 
-	DrawDebugSphere(GetWorld(),ProjectileSpawnPointLocation,10.f,12,FColor::Red,false,3.f);
+	//DrawDebugSphere(GetWorld(),ProjectileSpawnPointLocation,10.f,12,FColor::Red,false,3.f);
 
 	auto Projectile = GetWorld()->SpawnActor<AProjectile>(ProjectileClass,ProjectileSpawnPointLocation,ProjectileSpawnPointRotation);
 
